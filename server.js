@@ -26,7 +26,7 @@ app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
-// Add a note
+// Add notes
 app.post("/api/notes", function (req, res) {
     console.log(req.body)
     var newNote = req.body;
@@ -45,7 +45,7 @@ app.post("/api/notes", function (req, res) {
     res.json(newNote);
 });
 
-// Deletes note
+// Delete notes
 app.delete("/api/notes/:id", function (req, res) {
     let chosen = req.params.id;
     console.log(chosen);
@@ -57,7 +57,6 @@ app.delete("/api/notes/:id", function (req, res) {
         let notes = JSON.parse(data)
         for (let index = 0; index < notes.length; index++) {
             if (notes[index].id === chosen) {
-                let del_note = "Deleted: " + notes[index];
                 notes.splice(index, 1);
                 console.log(notes);
                 fs.writeFile(path.join(__dirname, "db/db.json"), JSON.stringify(notes), function (err) {
