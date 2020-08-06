@@ -9,19 +9,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const fs = require("fs")
 
-// GET `/notes` 
+// GET /notes - Should return the notes.html file.
 app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
 
-// Displays all notes
+// GET /api/notes - Should read the db.json file and return all saved notes as JSON.
 app.get("/api/notes", function (req, res) {
     return res.sendFile(path.join(__dirname, "db/db.json"));
 });
 
 
-// Return the `index.html` file
+// GET * - Should return the index.html file
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "public/index.html"));
 });
