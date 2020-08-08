@@ -9,24 +9,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const fs = require("fs")
 
-// GET /notes - Should return the notes.html file.
+// GET /notes - Return the notes.html file.
 app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
 
-// GET /api/notes - Should read the db.json file and return all saved notes as JSON.
+// GET /api/notes - Display notes from db.json file.
 app.get("/api/notes", function (req, res) {
     return res.sendFile(path.join(__dirname, "db/db.json"));
 });
 
 
-// GET * - Should return the index.html file
+// GET * - Return the index.html file
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
-// Add notes
+// POST /api/notes - Retrieve new notes to save on the request body, add it to the db.json file
 app.post("/api/notes", function (req, res) {
     console.log(req.body)
     var newNote = req.body;
@@ -45,12 +45,11 @@ app.post("/api/notes", function (req, res) {
     res.json(newNote);
 });
 
-// Delete notes
+// DELETE /api/notes/:id - Receive a query parameter containing the id of a note to delete.
 app.delete("/api/notes/:id", function (req, res) {
     let chosen = req.params.id;
-    console.log(chosen);
+    console.log(`ID query parameter: ${chosen}`);
     let filepath = path.join(__dirname, "db/db.json")
-    console.log(filepath);
     fs.readFile(filepath, "utf8", (err, data) => {
         if (err) throw err;
         console.log(data);
@@ -70,5 +69,5 @@ app.delete("/api/notes/:id", function (req, res) {
 
 // Inits the server
 app.listen(PORT, function () {
-    console.log(`App listening on PORT ${PORT}`);
+    console.log(`Server listening on PORT ${PORT}`);
 });
