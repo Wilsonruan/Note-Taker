@@ -25,29 +25,34 @@ This application can be used to write, save, and delete notes with Express backe
 
         npm install 
 
-  1.  Start Note Taker:
+  1.  Start Note Taker in terminal:
 
         node server.js
 
 ## Usage:
 
-Step 1: Enter Topic and comments on the notes and click save button on top right. Step 2: To view note, click where on the note on the left side. Step 3: To delete note, simply click the on trash can inside the note bar.
+ 1. Open Heroku Link: https://note-taker-heroku-wilson.herokuapp.com/notes  
+
+ 1. Enter Topic and comments on the notes and click save button on top right.
+ 
+ 1. To view note, click where on the note on the left side. 
+
+ 1.  To delete note, simply click the on trash can inside the note bar.
 
 ## License:
    - [MIT](https://choosealicense.com/licenses/mit/)
    - [ISC](https://choosealicense.com/licenses/isc/)
 
 ## Contributing:
-    This is my own
+
+This is my own
 
 ## Test:
-    Run the command : npm run test
+
+Run the command : npm run test
 
 ## Questions: 
   - Please feel free to contact for additional questions by email below: 
   - [Email] wilsonruan23@gmail.com
   - You may visit my GitHub Page for additional information below: 
   - [GitHub]  https://github.com/Wilsonruan
-
-## Heroku Link
-https://note-taker-heroku-wilson.herokuapp.com/notes 
