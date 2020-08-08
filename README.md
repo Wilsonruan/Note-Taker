@@ -17,7 +17,17 @@ This application can be used to write, save, and delete notes with Express backe
 
 ## Installation:
     
-To use this application, first you will need to clone or download the codes from my GitHub. Enter 'npm install'  and then 'node server.js' 
+  1.  Download or clone the app the app from github.
+
+        git clone https://github.com/Wilsonruan/Note-Taker.git
+
+  1.  Install packages in terminal:
+
+        npm install 
+
+  1.  Start Note Taker:
+
+        node server.js
 
 ## Usage:
 
