@@ -2,7 +2,8 @@
 # Note Taker
 
 ## Description:
-    This application can be used to write, save, and delete notes with Express backend.  All retrieve notes will be saved into a JSON file.
+
+This application can be used to write, save, and delete notes with Express backend.  All retrieve notes will be saved into a JSON file.
 
 ## Table of Contents
 
@@ -15,11 +16,12 @@
 - [Questions](#questions)
 
 ## Installation:
-    To use this application, first you will need to clone or download the codes from my GitHub. Enter 'npm install' in terminal and then 'node server.js' 
+    
+To use this application, first you will need to clone or download the codes from my GitHub. Enter 'npm install'  and then 'node server.js' 
 
 ## Usage:
-    Step 1: Enter Topic and comments on the notes and click save button on top right. Step 2: To view note, click where on the note on the left side. Step 3: To delete note, simply click the on trash can inside the note bar.
-![ScreenShot](./Assets/Images/ScreenShot.jpg)
+
+Step 1: Enter Topic and comments on the notes and click save button on top right. Step 2: To view note, click where on the note on the left side. Step 3: To delete note, simply click the on trash can inside the note bar.
 
 ## License:
    - [MIT](https://choosealicense.com/licenses/mit/)
