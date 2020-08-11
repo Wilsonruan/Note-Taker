@@ -14,16 +14,14 @@ app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
+// GET * - Return the index.html file
+app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "public/index.html"));
+});
 
 // GET /api/notes - Display notes from db.json file.
 app.get("/api/notes", function (req, res) {
     return res.sendFile(path.join(__dirname, "db/db.json"));
-});
-
-
-// GET * - Return the index.html file
-app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 // POST /api/notes - Retrieve new notes to save on the request body, add it to the db.json file
